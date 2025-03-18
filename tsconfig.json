@@ -1,23 +1,30 @@
 {
   "compilerOptions": {
-    "lib": ["DOM", "ES2020"],
-    "jsx": "react-jsx",
-    "target": "ES2020",
-    "noEmit": true,
-    "skipLibCheck": true,
-    "useDefineForClassFields": true,
-
-    /* modules */
-    "module": "ESNext",
-    "isolatedModules": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-
-    /* type checking */
-    "strict": true,
+    "target": "es2017",
+    "module": "commonjs",
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "lib",
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "rootDir": ".",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      // TS5090 leading './'
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"]
+  "include": ["./src", "./types", "./config"],
+  "compileOnSave": false
 }
